@@ -30,41 +30,60 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RN-XB-mdI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop-button"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="163" y="463" width="75" height="75"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopRecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5I-IJ-W2R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OAy-xa-baE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9bj-jY-Kd8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9RN-XB-mdI" secondAttribute="bottom" constant="74" id="DF1-j0-3ap"/>
                             <constraint firstItem="98Z-Gn-wFC" firstAttribute="top" secondItem="OAy-xa-baE" secondAttribute="bottom" constant="8" id="JpT-TI-z9R"/>
                             <constraint firstItem="OAy-xa-baE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M91-NF-4G7"/>
+                            <constraint firstItem="9RN-XB-mdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bYe-NF-KwR"/>
                             <constraint firstItem="98Z-Gn-wFC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egm-8G-9zT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="OAy-xa-baE"/>
                                 <exclude reference="98Z-Gn-wFC"/>
+                                <exclude reference="9RN-XB-mdI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="9bj-jY-Kd8"/>
                                 <exclude reference="M91-NF-4G7"/>
                                 <exclude reference="JpT-TI-z9R"/>
                                 <exclude reference="egm-8G-9zT"/>
+                                <exclude reference="bYe-NF-KwR"/>
+                                <exclude reference="DF1-j0-3ap"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="OAy-xa-baE"/>
                                 <include reference="98Z-Gn-wFC"/>
+                                <include reference="9RN-XB-mdI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="9bj-jY-Kd8"/>
                                 <include reference="M91-NF-4G7"/>
                                 <include reference="JpT-TI-z9R"/>
                                 <include reference="egm-8G-9zT"/>
+                                <include reference="bYe-NF-KwR"/>
+                                <include reference="DF1-j0-3ap"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="recordingInProgress" destination="98Z-Gn-wFC" id="tDs-LP-215"/>
+                        <outlet property="recordingStopButton" destination="9RN-XB-mdI" id="OjR-d3-cmv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,5 +92,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stop-button" width="100" height="100"/>
     </resources>
 </document>
