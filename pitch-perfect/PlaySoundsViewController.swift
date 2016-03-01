@@ -34,9 +34,18 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.stop()
         audioPlayer.rate = 0.5
         audioPlayer.play()
-        // TODO: play recorded audio slowed down
     }
 
+    @IBAction func playRabbit(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer.rate = 2.0
+        audioPlayer.play()
+    }
+    
+    @IBAction func stopAudio(sender: UIButton) {
+        audioPlayer.stop()
+    }
+    
     /*
     // MARK: - Navigation
 
