@@ -14,6 +14,8 @@
 		5E692A391C846B3400EFEBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E692A371C846B3400EFEBD5 /* LaunchScreen.storyboard */; };
 		5E692A441C846B3400EFEBD5 /* pitch_perfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E692A431C846B3400EFEBD5 /* pitch_perfectTests.swift */; };
 		5E692A4F1C846B3400EFEBD5 /* pitch_perfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E692A4E1C846B3400EFEBD5 /* pitch_perfectUITests.swift */; };
+		5EB9161B1C864116003ECAD2 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9161A1C864116003ECAD2 /* PlaySoundsViewController.swift */; };
+		5EB9161D1C8651DE003ECAD2 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9161C1C8651DE003ECAD2 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		5E692A4A1C846B3400EFEBD5 /* pitch-perfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pitch-perfectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E692A4E1C846B3400EFEBD5 /* pitch_perfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pitch_perfectUITests.swift; sourceTree = "<group>"; };
 		5E692A501C846B3400EFEBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB9161A1C864116003ECAD2 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		5EB9161C1C8651DE003ECAD2 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../../Downloads/movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 				5E692A2E1C846B3400EFEBD5 /* AppDelegate.swift */,
 				5E692A301C846B3400EFEBD5 /* ViewController.swift */,
 				5E692A321C846B3400EFEBD5 /* Main.storyboard */,
+				5EB9161A1C864116003ECAD2 /* PlaySoundsViewController.swift */,
 				5E692A351C846B3400EFEBD5 /* Assets.xcassets */,
+				5EB9161C1C8651DE003ECAD2 /* movie_quote.mp3 */,
 				5E692A371C846B3400EFEBD5 /* LaunchScreen.storyboard */,
 				5E692A3A1C846B3400EFEBD5 /* Info.plist */,
 			);
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					5E692A2A1C846B3400EFEBD5 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = F878M25L6Q;
 					};
 					5E692A3E1C846B3400EFEBD5 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -231,6 +238,7 @@
 			files = (
 				5E692A391C846B3400EFEBD5 /* LaunchScreen.storyboard in Resources */,
 				5E692A361C846B3400EFEBD5 /* Assets.xcassets in Resources */,
+				5EB9161D1C8651DE003ECAD2 /* movie_quote.mp3 in Resources */,
 				5E692A341C846B3400EFEBD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E692A311C846B3400EFEBD5 /* ViewController.swift in Sources */,
+				5EB9161B1C864116003ECAD2 /* PlaySoundsViewController.swift in Sources */,
 				5E692A2F1C846B3400EFEBD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pitch-perfect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnleszczynski.pitch-perfect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pitch-perfect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnleszczynski.pitch-perfect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
