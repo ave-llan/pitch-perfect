@@ -34,7 +34,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop-button"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="163" y="463" width="75" height="75"/>
+                                    <rect key="frame" x="163" y="451" width="75" height="75"/>
                                 </variation>
                                 <connections>
                                     <action selector="stopRecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5I-IJ-W2R"/>
@@ -57,12 +57,12 @@
                                 <exclude reference="9RN-XB-mdI"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="DF1-j0-3ap"/>
+                                <exclude reference="bYe-NF-KwR"/>
                                 <exclude reference="9bj-jY-Kd8"/>
                                 <exclude reference="M91-NF-4G7"/>
                                 <exclude reference="JpT-TI-z9R"/>
                                 <exclude reference="egm-8G-9zT"/>
-                                <exclude reference="bYe-NF-KwR"/>
-                                <exclude reference="DF1-j0-3ap"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -72,18 +72,18 @@
                                 <include reference="9RN-XB-mdI"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="DF1-j0-3ap"/>
+                                <include reference="bYe-NF-KwR"/>
                                 <include reference="9bj-jY-Kd8"/>
                                 <include reference="M91-NF-4G7"/>
                                 <include reference="JpT-TI-z9R"/>
                                 <include reference="egm-8G-9zT"/>
-                                <include reference="bYe-NF-KwR"/>
-                                <include reference="DF1-j0-3ap"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="recordingInProgress" destination="98Z-Gn-wFC" id="tDs-LP-215"/>
-                        <outlet property="recordingStopButton" destination="9RN-XB-mdI" id="OjR-d3-cmv"/>
+                        <outlet property="stopButton" destination="9RN-XB-mdI" id="cwL-1y-8vD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
