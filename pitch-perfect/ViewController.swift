@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func recordAudio(sender: UIButton) {
+        // TODO: display 'recording now' label after touch
+        // TODO: record audio after touch
+    }
 
 }
 
