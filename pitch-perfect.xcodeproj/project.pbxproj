@@ -16,6 +16,7 @@
 		5E692A4F1C846B3400EFEBD5 /* pitch_perfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E692A4E1C846B3400EFEBD5 /* pitch_perfectUITests.swift */; };
 		5EB9161B1C864116003ECAD2 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9161A1C864116003ECAD2 /* PlaySoundsViewController.swift */; };
 		5EB9161D1C8651DE003ECAD2 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9161C1C8651DE003ECAD2 /* movie_quote.mp3 */; };
+		5EB9161F1C87040C003ECAD2 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9161E1C87040C003ECAD2 /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5E692A501C846B3400EFEBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EB9161A1C864116003ECAD2 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		5EB9161C1C8651DE003ECAD2 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../../Downloads/movie_quote.mp3; sourceTree = "<group>"; };
+		5EB9161E1C87040C003ECAD2 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				5E692A2E1C846B3400EFEBD5 /* AppDelegate.swift */,
 				5E692A301C846B3400EFEBD5 /* RecordSoundsViewController.swift */,
+				5EB9161E1C87040C003ECAD2 /* RecordedAudio.swift */,
 				5E692A321C846B3400EFEBD5 /* Main.storyboard */,
 				5EB9161A1C864116003ECAD2 /* PlaySoundsViewController.swift */,
 				5E692A351C846B3400EFEBD5 /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB9161F1C87040C003ECAD2 /* RecordedAudio.swift in Sources */,
 				5E692A311C846B3400EFEBD5 /* RecordSoundsViewController.swift in Sources */,
 				5EB9161B1C864116003ECAD2 /* PlaySoundsViewController.swift in Sources */,
 				5E692A2F1C846B3400EFEBD5 /* AppDelegate.swift in Sources */,
