@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    var audioRecorder:AVAudioRecorder!
+    var recordedAudio:RecordedAudio!
     
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
@@ -34,12 +38,47 @@ class RecordSoundsViewController: UIViewController {
         stopButton.hidden = false
         print("recording...")
         // TODO: record audio after touch
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        
+        let recordingName = "my_audio.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = NSURL.fileURLWithPathComponents(pathArray)
+        print(filePath)
+        
+        let session = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        
+        try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder.delegate = self
+        audioRecorder.meteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
+    }
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        if(flag) {
+            print("Recording worked!")
+            recordedAudio = RecordedAudio()
+            recordedAudio.filePathUrl = recorder.url
+            recordedAudio.title = recorder.url.lastPathComponent
+            
+            // perform segue to playback screen
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        } else {
+            print("Recording was not successful")
+            recordButton.enabled = true
+            stopButton.hidden = true
+        }
+
     }
     
     @IBAction func stopRecordAudio(sender: UIButton) {
         recordButton.enabled = true
         recordingInProgress.hidden = true
         stopButton.hidden = true
+        // stop recording
+        audioRecorder.stop()
+        let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setActive(false)
     }
 }
 
